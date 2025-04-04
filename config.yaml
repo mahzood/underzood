@@ -1,0 +1,26 @@
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  nameserver:
+    - 1.1.1.1
+    - 1.0.0.1
+
+proxies:
+  - name: underzood
+    type: http
+    server: restless-wildflower-7bb0.mahzood.workers.dev
+    port: 80
+    plugin: cfworker
+    plugin-opts:
+      host: restless-wildflower-7bb0.mahzood.workers.dev
+      path: /?url=
+
+proxy-groups:
+  - name: underzood
+    type: select
+    proxies:
+      - underzood
+
+rules:
+  - MATCH,underzood
