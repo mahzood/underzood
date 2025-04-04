@@ -15,6 +15,8 @@ proxies:
     plugin-opts:
       host: restless-wildflower-7bb0.mahzood.workers.dev
       path: /?url=
+  - name: direct
+    type: direct
 
 proxy-groups:
   - name: underzood_group
