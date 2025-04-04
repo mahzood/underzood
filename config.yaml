@@ -17,11 +17,11 @@ proxies:
       path: /?url=
 
 proxy-groups:
-  - name: underzood
+  - name: underzood_group
     type: select
     proxies:
       - underzood
 
 rules:
-  - DOMAIN-SUFFIX,example.com,underzood
+  - DOMAIN-SUFFIX,example.com,underzood_group
   - MATCH,direct
