@@ -23,4 +23,5 @@ proxy-groups:
       - underzood
 
 rules:
-  - MATCH,underzood
+  - DOMAIN-SUFFIX,example.com,underzood
+  - MATCH,direct
